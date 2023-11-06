@@ -3,20 +3,3 @@ Implementation and visualization of procedure Context-Free Grammar (CFG) to Push
 Step 1: Convert the given productions of CFG into GNF.
 Step 2: Convert the productions of step 1 to PDA
 
-Take a test case, S->abAB,A->aAB|$,B->b., as an example. The result turns out to be:
-The grammar is not in GNF
-Converting~
-To Greibach normal form (GNF):
-A -> bAC, bC, 
-B -> b, 
-C -> a, 
-S -> aSB, bAC, bC, 
-*-----------------------*
-To Pushdown Automata (PDA): 
-(p0,$,z) -> {(p,Sz)}
-(p,a,S) -> {(p, SB)}
-(p,b,S) -> {(p, AC),(p, C)}
-(p,b,A) -> {(p, AC),(p, C)}
-(p,b,B) -> {(p, $)}
-(p,a,C) -> {(p, $)}
-(p,$,z) -> {(p1,$)}
